@@ -1,5 +1,15 @@
-* {padding: 0; margin: 0;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    border: 0;
+    outline: 0;
+}
+
 main {
+    background-color: #e2e2e2;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,7 +21,8 @@ h5 {
     font-weight: 700;
     font-size: 18px;
     line-height: 22px;
-    color: #000000;
+    color: #051d13;
+
 }
 
 h3 {
@@ -22,12 +33,14 @@ h3 {
     text-align: center;
     letter-spacing: 0.03em;
     text-indent: 1px;
-    color: #000000;
+    color: #051d13;
 }
 
 input {
+    margin-top: 3px;
+    margin-top: 3px;
     background: #FFFFFF;
-    border: 2px solid #000000;
+    border: 1px solid #948c8c;
     border-radius: 7px;
     width: 314px;
     height: 52px;
@@ -37,7 +50,7 @@ input {
     width: 316px;
     height: 52px;
     background: #CDD2FD;
-    border: 2px solid #000000;
+    border: 1px solid #948c8c;
     border-radius: 15px;
     margin-top: 25%;
 }
@@ -64,11 +77,11 @@ input {
 }
 
 
-.error{
+.error {
     display: block;
 }
 
-.none{
+.none {
     display: none;
 }
 
@@ -77,7 +90,7 @@ input {
     border-radius: 7px;
 }
 
-.flexbox{
+.flexbox {
     display: flex;
     flex-direction: row;
 }
@@ -87,7 +100,7 @@ input {
     margin-right: 30px;
 }
 
-.inputMenor{
+.inputMenor {
     width: 100%;
 }
 
@@ -100,4 +113,13 @@ input {
     height: 100%;
     z-index: 9999;
     background: url('http://i.imgur.com/zAD2y29.gif') 50% 50% no-repeat rgba(0, 0, 0, 0.123);
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+form {
+    background-color: #7d75744d;
+    padding: 15px;
 }

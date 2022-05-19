@@ -8,6 +8,8 @@ function verificarcep() {
     document.getElementById("cepinvalido").classList.add("error");
     document.getElementById("loader").style.display = "none";
     return;
+  } else {
+    document.getElementById("cepinvalido").classList.remove("error");
   }
   fetch(url)
     .then((response) => {
@@ -16,13 +18,16 @@ function verificarcep() {
     .then((data) => {
       if (data.uf === undefined) throw new err();
 
-      document.getElementById("loader").style.display = "none";
-      document.getElementById("rua").value = data.logradouro;
-      document.getElementById("bairro").value = data.bairro;
-      document.getElementById("cidade").value = data.localidade;
-      document.getElementById("UF").value = data.uf;
-      document.getElementById("ibge").value = data.ibge;
-      document.getElementById("ddd").value = data.ddd;
+      setInterval( ()=>{
+        document.getElementById("rua").value = data.logradouro;
+        document.getElementById("bairro").value = data.bairro;
+        document.getElementById("cidade").value = data.localidade;
+        document.getElementById("UF").value = data.uf;
+        document.getElementById("ibge").value = data.ibge;
+        document.getElementById("ddd").value = data.ddd;
+        document.getElementById("loader").style.display = "none";
+
+      }, 600)
       
     })
     .catch((err) => {
