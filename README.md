@@ -4,7 +4,7 @@
 # Lading Page
 
 Projeto com intuito de aprender html, css e js.
-https://guifranchin.github.io/ladingpage/
+(https://guifranchin.github.io/cep-api/)
 
 ## Veja o desenvolvimento do projeto:
 
