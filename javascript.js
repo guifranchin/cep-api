@@ -1,4 +1,4 @@
-const compare = /[0-9]{5}-[\d]{3}/g;
+const compare = /[0-9]{8}/g;
 function verificarcep() {
   document.getElementById("loader").style.display = "block";
   const field = document.getElementById("cep").value;
@@ -11,6 +11,7 @@ function verificarcep() {
   } else {
     document.getElementById("cepinvalido").classList.remove("error");
   }
+
   fetch(url)
     .then((response) => {
       return response.json();
@@ -18,7 +19,8 @@ function verificarcep() {
     .then((data) => {
       if (data.uf === undefined) throw new err();
 
-      setInterval( ()=>{
+      setTimeout( ()=>{
+
         document.getElementById("rua").value = data.logradouro;
         document.getElementById("bairro").value = data.bairro;
         document.getElementById("cidade").value = data.localidade;
@@ -27,12 +29,14 @@ function verificarcep() {
         document.getElementById("ddd").value = data.ddd;
         document.getElementById("loader").style.display = "none";
 
-      }, 600)
-      
+      }, 300)
+      return true;
     })
     .catch((err) => {
       document.getElementById("cepinvalido").classList.add("error");
       document.getElementById("form").reset();
       document.getElementById("loader").style.display = "none";
+    }).finally( () => {
+      
     });
 }
