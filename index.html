@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="loader" class="loader"></div>
+    <main>
+      <form id="form" action="#" onsubmit="Cadastrar(); return false">
+        <h3>Localização</h3>
+        <div>
+          <h5>Informe o CEP</h5>
+          <input class="inputMenor" type="text" id="cep" onblur="verificarcep()"/>
+          <div id="cepinvalido" class="invalid">CEP INVALIDO</div>
+        </div>
+        <div>
+            <h5>Rua</h5>
+            <input class="inputMenor" type="text" id="rua" readonly />
+        </div>
+        <div>
+            <h5>Bairro</h5>
+            <input class="inputMenor" type="text" id="bairro" onblur="" readonly/>
+
+        </div>
+        <div class="flexbox">
+            <div>
+                <h5>Cidade</h5>
+                <input class="inputMaior" type="text" id="cidade" onblur="" readonly/>
+              </div>
+              <div>
+                <h5>UF</h5>
+                <input class="inputMenor" type="text" id="UF" onblur="" readonly/>
+              </div>
+        </div>
+        <div class="flexbox">
+            <div>
+                <h5>IBGE</h5>
+                <input class="inputMaior" type="text" id="ibge" onblur="" readonly/>
+              </div>
+              <div>
+                <h5>DDD</h5>
+                <input class="inputMenor" type="text" id="ddd" onblur="" readonly/>
+              </div>
+        </div>
+        <input id="button" class="button inputMenor" type="submit"></input>
+      </form>
+    </main>
+  </body>
+</html>
+
+<script src="javascript.js"></script>
